@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="universityApp">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>University Teacher</title>
+
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        
+        <!-- AngularJS -->
+        <script src="js/lib/angular.min.js"></script>
+        <script src="js/app.js"></script>
+
+
+    </head>    
+    <body>
+
+        <div class="container" ng-controller="teacherCtrl as theTeacher">
+            <h1>Teacher</h1>
+            <h4>{{ theTeacher.teacher.name }}</h4>
+            <hr>
+
+            <div class="row">
+                
+                <!-- Teacher's Image -->
+                <div class="col-sm-3">
+                    <section class="panel">
+                        <div class="panel-body" align="center">
+                            <img ng-src="{{ theTeacher.teacher.image }}" class="img-circle" alt="Teacher" width="150px" height="150px">
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Teacher's Bio -->
+                <div class="col-sm-9">
+                    <section class="panel">
+                        <div class="panel-body">
+                            {{ theTeacher.teacher.bio }}
+                            <br>
+                            <br>
+                            <strong>Age:</strong> {{ theTeacher.teacher.age }} years old   
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
