@@ -1,4 +1,4 @@
-## UNIVERSITY TEACHER
+# UNIVERSITY TEACHER
 
 Simple AngularJS application
 
